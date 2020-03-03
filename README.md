@@ -5,7 +5,7 @@ Speed slider - javascript slider with fadeIn/fadeOut transitions (ES6 Class with
 https://github.com/moovspace/speed-slider-js/blob/master/speed-slider-js.html
 
 ### Geting started
-```bash
+```js
 <script>
 import SpeedSlider from ./speed-slider.js
 
@@ -14,7 +14,7 @@ let slider = new SpeedSlider();
 ```
 
 ### Html
-```bash
+```html
 <body>
 
 <!-- Slider images -->
@@ -39,7 +39,7 @@ let slider = new SpeedSlider();
 </body>
 ```
 ### Css
-```bash
+```css
 <style>
 	html, body{float: left; width: 100%;margin: 0px; padding: 0px;}
 	#slider{float: left; width: 100%; height: 70vh; overflow: hidden; position: relative; box-sizing: border-box}
