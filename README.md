@@ -6,11 +6,17 @@ https://github.com/moovspace/speed-slider-js/blob/master/speed-slider-js.html
 
 ### Geting started
 ```js
-<script>
-import SpeedSlider from ./speed-slider.js
+<html lang="pl">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
 
-let slider = new SpeedSlider();
-</script>
+	<script src="speed-slider.js"></script>
+
+	<script>
+		let slider = new SpeedSlider();
+	</script>
+</head>
 ```
 
 ### Html
