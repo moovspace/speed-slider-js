@@ -2,21 +2,22 @@
 Speed slider - RWD javascript slider with fadeIn/fadeOut transitions (ES6 Class without jquery)
 
 ## Working sample (download and double click)
-https://github.com/moovspace/speed-slider-js/blob/master/speed-slider-js.html
+https://github.com/moovspace/speed-slider-js/blob/master/index.html
 
 ### Geting started
 ```js
 <html lang="pl">
 <head>
+	<title>Speed Slider Js rwd javascript slider (ES6)</title>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-
-	<link rel="stylesheet" type="text/css" href="speed-slider.css">
 	
+	<link rel="stylesheet" type="text/css" href="speed-slider.css">
 	<script src="speed-slider.js"></script>
-
 	<script>
-		let slider = new SpeedSlider();
+	window.onload = function() {
+		var slider = new SpeedSlider();
+	};
 	</script>
 </head>
 ```
@@ -33,16 +34,15 @@ https://github.com/moovspace/speed-slider-js/blob/master/speed-slider-js.html
 	<img src="https://i.pinimg.com/originals/8e/9c/9a/8e9c9a2ec922c107855c2c1d647f28d8.jpg">
 </div>
 
-
-<!-- Slider pages -->
-<div id="dots"></div>
-
 <!-- Slider buttons -->
 <div id="buttons">
 	<span id="pushLeft"><img src="left.png"></span>
 	<span id="pushRight"><img src="right.png"></span>
 </div>
 
+<!-- Slider pages -->
+<div id="dots"></div>
+	
 </body>
 ```
 
