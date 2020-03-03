@@ -1,4 +1,4 @@
-export default class SpeedSlider
+class SpeedSlider
 {
 	constructor(options = [], div = "slider", dots = "dots"){
 		this.Options = options;
