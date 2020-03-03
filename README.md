@@ -45,3 +45,6 @@ https://github.com/moovspace/speed-slider-js/blob/master/speed-slider-js.html
 
 </body>
 ```
+
+### Slider image
+![Speed slider js](https://github.com/moovspace/speed-slider-js/blob/master/speed-slider.png | width=600)
