@@ -17,22 +17,24 @@ let slider = new SpeedSlider();
 ```bash
 <body>
 
-	<!-- Slider images -->
+<!-- Slider images -->
+<div id="slider">
 	<div id="slider">
-		<img src="https://media-cdn.tripadvisor.com/media/photo-s/07/ab/22/e1/restaurant-zur-weinsteige.jpg">
-		<img src="https://i.pinimg.com/originals/42/cc/e7/42cce74da4c084b85f18d8f28640f9ef.jpg">
-		<img src="https://tesco.pl/imgglobal/content_platform/recipes/main/e6/sized/756x426-100-fff-700-0/e69e446c6f8e29d6dc71131108131db7.jpg">
-		<img src="https://d1doqjmisr497k.cloudfront.net/-/media/kamispl-2016/franks-pl/recipes_img/2000x1125/big_0003_pikantny_teksanski_burger.png?vd=20190329T115046Z&ir=1&width=885&height=498&crop=auto&quality=75&speed=0&hash=0F58CC5398890A3F5F025E28274253E286F5D3AC">
-	</div>
+	<img src="https://store-images.s-microsoft.com/image/apps.18650.66262159861864182.afc15b89-5a5a-4784-8fff-e827eb9cb460.77327680-ff47-4889-aace-b49a1740ea02?mode=scale&q=90&h=1080&w=1920&background=%23FFFFFF">
+	<img src="https://d13ezvd6yrslxm.cloudfront.net/wp/wp-content/images/starwars-tros-stormtroopers-700x322.jpg">
+	<img src="https://cdn.vox-cdn.com/thumbor/E93ooXh1Zqwn_dkrpHo_K77lHys=/0x0:1200x503/1200x800/filters:focal(504x156:696x348)/cdn.vox-cdn.com/uploads/chorus_image/image/65503343/1637461.7.jpg">
+	<img src="https://news.sagacom.com/wp-content/blogs.dir/3/files/2019/12/AP_19351055448240.jpg">
+</div>
+</div>
 
-	<!-- Slider pages -->
-	<div id="dots"></div>
+<!-- Slider pages -->
+<div id="dots"></div>
 
-	<!-- Slider buttons -->
-	<div id="buttons">
-		<span id="pushLeft"><img src="left.png"></span>
-		<span id="pushRight"><img src="right.png"></span>
-	</div>
+<!-- Slider buttons -->
+<div id="buttons">
+	<span id="pushLeft"><img src="left.png"></span>
+	<span id="pushRight"><img src="right.png"></span>
+</div>
 
 </body>
 ```
