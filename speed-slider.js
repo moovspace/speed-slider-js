@@ -1,54 +1,57 @@
 class SpeedSlider
 {
-	constructor(div = "slider", dots = "dots", next = "pushRight", back = "pushLeft")
-	{
-		let slider = document.getElementById(div);
-		let qty = document.getElementById(div).querySelectorAll("img").length;
-		let doty = document.getElementById(dots);
+	constructor(time = 50, div = "slider", dots = "dots", next = "pushRight", back = "pushLeft")
+	{        
+        let slider = document.getElementById(div);
+        let qty = document.getElementById(div).querySelectorAll("img").length;
+        let doty = document.getElementById(dots);
 
-		slider.dataset.current = 1;
-		slider.dataset.qty = qty;
+        slider.dataset.current = 1;
+        slider.dataset.qty = qty;
 
-		// Pages
-		this.AddDosts(doty, qty, div);
-		// Events
-		this.AddEvent(div, doty, next, back);
-		// Curr page
-		SpeedSlider.SetActiveDot(doty, 1);
+        // Pages
+        this.AddDosts(doty, qty, div, time);
+        // Events
+        this.AddEvent(div, doty, next, back, time);
+        // Curr page
+        SpeedSlider.SetActiveDot(doty, 1);        
 	}
 
-	AddDosts(dots, qty, div){
+	AddDosts(dots, qty, div, time = 50)
+    {
 		for (let index = 1; index <= qty; index++)
 		{
+            // Create new span
 			let sp = document.createElement("span");
+            // Add data-nr attr
 			sp.dataset.nr = index;
-			// Event here
+
 			sp.addEventListener("click", (e) => {
 				// Get current
 				let curr = SpeedSlider.GetCurrent(div);
 				let qty = SpeedSlider.GetQuantity(div);
 				let page = e.target.dataset.nr;
+                
+                console.log("Pager: ", page);
 
-				if(curr > page){
-					// Get page
-					console.log("Miniej: ", page);
-
+				if(curr > page)
+                {
 					while(curr > page){
 						let el = document.getElementById(div);
 						let img = el.querySelector("img:nth-child("+curr+")");
-						SpeedSlider.AnimateOpacityHide(img);
+						SpeedSlider.AnimateOpacityHide(img, time);
 						curr--;
 						SpeedSlider.SetActiveDot(dots, curr);
 					}
 					SpeedSlider.SetCurrent(div, curr);
-				}else{
-					console.log("Więcej: ", page);
-
+				}
+                else
+                {
 					while(curr < page){
 						curr++;
 						let el = document.getElementById(div);
 						let img = el.querySelector("img:nth-child("+curr+")");
-						SpeedSlider.AnimateOpacity(img);
+						SpeedSlider.AnimateOpacity(img, time);
 						SpeedSlider.SetActiveDot(dots, curr);
 					}
 					SpeedSlider.SetCurrent(div, curr);
@@ -59,20 +62,20 @@ class SpeedSlider
 		}
 	}
 
-	AddEvent(div, dots, next, back)
+	AddEvent(div, dots, next, back, time = 50)
 	{
 			document.getElementById(next).addEventListener("click", () => {
 
 				let curr = SpeedSlider.GetCurrent(div);
 				let qty = SpeedSlider.GetQuantity(div);
-
-				curr++;
-				if(curr <= qty)
+				
+				if(curr < qty)
 				{
+                    curr++;
 					SpeedSlider.SetCurrent(div, curr);
 					let el = document.getElementById(div);
 					let img = el.querySelector("img:nth-child("+curr+")");
-					SpeedSlider.AnimateOpacity(img);
+					SpeedSlider.AnimateOpacity(img, time);
 					SpeedSlider.SetActiveDot(dots, curr);
 				}
 			})
@@ -82,13 +85,11 @@ class SpeedSlider
 				let curr = SpeedSlider.GetCurrent(div);
 				let qty = SpeedSlider.GetQuantity(div);
 
-				console.log(curr);
-
 				if(curr > 1)
 				{
 					let el = document.getElementById(div);
 					let img = el.querySelector("img:nth-child("+curr+")");
-					SpeedSlider.AnimateOpacityHide(img);
+					SpeedSlider.AnimateOpacityHide(img,time);
 					curr--;
 					SpeedSlider.SetCurrent(div, curr);
 					SpeedSlider.SetActiveDot(dots, curr);
@@ -112,21 +113,21 @@ class SpeedSlider
 		return el.dataset.qty;
 	}
 
-	static async AnimateOpacity(ele){
+	static async AnimateOpacity(ele, time = 50){
 		let i = 0;
 
 		while(i < 1){
-			await new Promise(resolve => setTimeout(resolve, 50));
+			await new Promise(resolve => setTimeout(resolve, time));
 			i = i + 0.1;
 			ele.style.opacity = i;
 		}
 	}
 
-	static async AnimateOpacityHide(ele){
+	static async AnimateOpacityHide(ele, time = 50){
 		let i = 1;
 
 		while(i > 0){
-			await new Promise(resolve => setTimeout(resolve, 50));
+			await new Promise(resolve => setTimeout(resolve, time));
 			i = i - 0.1;
 			ele.style.opacity = i;
 		}
