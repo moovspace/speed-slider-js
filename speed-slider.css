@@ -7,7 +7,7 @@ html, body{float: left; width: 100%;margin: 0px; padding: 0px;}
 #dots span{float: left; width: 9px; height: 9px; border: 1px solid #5c5; margin-right: 10px;}
 #dots span:hover{border: 1px solid #5c5; background: #5c5; cursor: pointer}
 #dots span.btn-active{border: 1px solid #5c5; background: #5c5; cursor: pointer}
-#buttons{position: relative; margin-top: -250px; float: left; width: 100%; overflow: hidden; z-index: 2}
+#buttons{margin-top: -225px; position: relative; float: left; width: 100%; overflow: hidden; z-index: 2}
 #buttons span{float: left; width: auto; border: 1px solid #5c5; background: #5c5; padding: 5px 10px; margin-right: 10px; cursor: pointer; transition: all .6s}
 #buttons span img{width: 20px;}
 #buttons span:hover{background: cadetblue; border: 1px solid cadetblue}
