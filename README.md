@@ -47,4 +47,4 @@ https://github.com/moovspace/speed-slider-js/blob/master/index.html
 ```
 
 ### Slider image
-<img src="https://github.com/moovspace/speed-slider-js/blob/master/speed-slider.png" style="width: 100%; height: auto">
+<img src="https://github.com/moovspace/speed-slider-js/blob/master/speed-slider.jpg" style="width: 100%; height: auto">
