@@ -16,7 +16,8 @@ https://github.com/moovspace/speed-slider-js/blob/master/index.html
 	<script src="speed-slider.js"></script>
 	<script>
 	window.onload = function() {
-		var slider = new SpeedSlider();
+		var time = 50; // ms
+		var slider = new SpeedSlider(time);
 	};
 	</script>
 </head>
