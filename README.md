@@ -5,7 +5,7 @@ Speed slider - RWD javascript slider with fadeIn/fadeOut transitions (ES6 Class 
 https://github.com/moovspace/speed-slider-js/blob/master/index.html
 
 ### Geting started
-```js
+```html
 <html lang="pl">
 <head>
 	<title>Speed Slider Js rwd javascript slider (ES6)</title>
