@@ -5,18 +5,21 @@ class SpeedSlider
 		var div = '#' + div;
 		var dots = "#" + dots;
 		let slider = document.querySelector(div);
-		let qty = slider.querySelectorAll("img").length;
-		let doty = document.querySelector(dots);
+		if(slider != null)
+		{
+			let qty = slider.querySelectorAll("img").length;
+			let doty = document.querySelector(dots);
 
-		slider.dataset.current = 1;
-		slider.dataset.qty = qty;
+			slider.dataset.current = 1;
+			slider.dataset.qty = qty;
 
-		// Pages
-		this.AddDosts(doty, qty, div, time);
-		// Events
-		this.AddEvent(div, doty, next, back, time);
-		// Curr page
-		SpeedSlider.SetActiveDot(doty, 1);
+			// Pages
+			this.AddDosts(doty, qty, div, time);
+			// Events
+			this.AddEvent(div, doty, next, back, time);
+			// Curr page
+			SpeedSlider.SetActiveDot(doty, 1);
+		}
 	}
 
 	AddDosts(dots, qty, div, time = 50)
